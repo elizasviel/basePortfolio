@@ -8,7 +8,6 @@ import { formatEther } from "ethers/utils";
 import { PortfolioValue } from "../components/Portfolio/PortfolioValue";
 import { TransactionList } from "../components/Portfolio/TransactionList";
 import { SwapForm } from "../components/Trading/SwapForm";
-import styles from "./TestPage.module.css";
 
 export function TestPage() {
   const [walletBalance, setWalletBalance] = useState<string>("");
@@ -29,28 +28,26 @@ export function TestPage() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Base Trading App and Portfolio</h1>
+    <div className="portfolio-container">
+      <h1 className="portfolio-title">Base Trading App and Portfolio</h1>
 
-      <div className={styles.content}>
-        <div className={styles.infoColumn}>
-          <section className={styles.section}>
-            <h2 className={styles.subtitle}>Wallet Info</h2>
-            <p className={styles.text}>Address: {client.account.address}</p>
-            <p className={styles.text}>Balance: {walletBalance} ETH</p>
+      <div className="portfolio-content">
+        <div className="info-column">
+          <section className="section">
+            <h2 className="subtitle">Wallet Info</h2>
+            <p className="text">Address: {client.account.address}</p>
+            <p className="text">Balance: {walletBalance} ETH</p>
             <PortfolioValue />
           </section>
 
-          <section className={styles.section}>
+          <section className="section">
             <div className="token-info-container">
-              <h2 className={styles.subtitle}>Token Info</h2>
-              {loading && <div className={styles.text}>Loading...</div>}
-              {error && (
-                <div className={styles.error}>Error: {error.message}</div>
-              )}
+              <h2 className="subtitle">Token Info</h2>
+              {loading && <div className="text">Loading...</div>}
+              {error && <div className="error">Error: {error.message}</div>}
               {tokenInfo && (
                 <>
-                  <h2 className={styles.subtitle}>
+                  <h2 className="subtitle">
                     {tokenInfo.name} ({tokenInfo.symbol})
                   </h2>
                   <PriceDisplay tokenInfo={tokenInfo} />
@@ -62,14 +59,14 @@ export function TestPage() {
           </section>
         </div>
 
-        <div className={styles.swapColumn}>
-          <section className={`${styles.section} ${styles.fullHeight}`}>
+        <div className="swap-column">
+          <section className="section full-height">
             <SwapForm />
           </section>
         </div>
 
-        <div className={styles.historyColumn}>
-          <section className={`${styles.section} ${styles.fullHeight}`}>
+        <div className="history-column">
+          <section className="section full-height">
             <TransactionList />
           </section>
         </div>

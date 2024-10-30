@@ -1,6 +1,5 @@
 import { useTransactions } from "../../hooks/useTransactions";
 import { formatEther } from "ethers";
-import styles from "./TransactionList.module.css";
 
 export function TransactionList() {
   const { transactions, loading } = useTransactions();
@@ -19,11 +18,11 @@ export function TransactionList() {
   if (loading) return <div>Loading transactions...</div>;
 
   return (
-    <div className={styles["transaction-list"]}>
+    <div className="transaction-list">
       <h2>Transaction History</h2>
-      <div className={styles["transactions-container"]}>
+      <div className="transactions-container">
         {transactions.map((tx) => (
-          <div key={tx.hash} className={styles.transaction}>
+          <div key={tx.hash} className="transaction">
             <div>
               Hash: {tx.hash.slice(0, 6)}...{tx.hash.slice(-4)}
             </div>
