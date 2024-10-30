@@ -80,6 +80,7 @@ export class SwapLogic {
     isBuy: boolean,
     inAmount: string
   ): Promise<SwapQuote> {
+    console.log("GETTING QUOTE FOR", token, isBuy, inAmount);
     const [sellToken, buyToken, formattedAmount] = isBuy
       ? ["ETH", NETWORK_TOKENS.USDC, parseEther(inAmount).toString()]
       : [NETWORK_TOKENS.USDC, "ETH", parseUnits(inAmount, 6).toString()];
