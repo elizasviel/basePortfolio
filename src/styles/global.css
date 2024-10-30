@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+:root {
+  /* Colors */
+  --color-stroke: #323036;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.72);
+  --color-text-tertiary: rgba(255, 255, 255, 0.5);
+  --color-accent: #99efa0;
+  --color-accent-dark: #2dcf79;
+  --color-accent-light: #bcefc0dd;
+  --color-accent-lightest: rgb(224 249 226 / 27%);
+  --color-text-onaccent: rgba(0, 0, 0, 0.87);
+  --color-background: #010101;
+  --color-background-light: #302e36;
+  --color-ghost-surface: #0e0e0e;
+  --color-ghost-surface-hover: #151515;
+  --color-ghost-surface-active: #0e0e0e;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-backdrop: rgba(0, 0, 0, 0.65);
+
+  /* Typography */
+  --font-family-primary: "Space Mono", monospace;
+  --font-family-accent: "Press Start 2P", monospace;
+  --font-family-heading: "Kode Mono", monospace;
+
+  /* Font Styles */
+  --text-body1: 1em/1.6 var(--font-family-primary);
+  --text-body2: 0.875em/1.2 var(--font-family-primary);
+  --text-body3: 1.125em/1.4 var(--font-family-primary);
+  --text-heading1: 600 3em/1 var(--font-family-heading);
+  --text-heading2: 500 1.5em/1.2 var(--font-family-heading);
+  --text-heading3: 700 1.25em var(--font-family-primary);
+  --text-button1: 0.75em/1.4 var(--font-family-accent);
+  --text-button2: 0.875em/1.2 var(--font-family-primary);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  margin: 0;
+  font-family: var(--font-family-primary);
+  height: 100%;
+  font: var(--text-body1);
+}
+
+.swap-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.swap-form h2 {
+  margin: 0 0 1rem;
+  flex-shrink: 0;
+}
+
+.swap-form-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-right: -8px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.input-group input {
+  flex: 1;
+  background: var(--color-background);
+  font: var(--text-body1);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-stroke);
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.token-badge {
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-text-onaccent);
+  border-radius: 8px;
+  font: var(--text-button1);
+}
+
+.direction-switch {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  background: var(--color-ghost-surface);
+  border: 1px solid var(--color-stroke);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font: var(--text-button1);
+  color: var(--color-text-primary);
+}
+
+.direction-switch:hover {
+  background: var(--color-ghost-surface-hover);
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.action-buttons button {
+  font: var(--text-button1);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quote-button {
+  background: var(--color-ghost-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-stroke) !important;
+}
+
+.swap-button {
+  background: var(--color-accent);
+  color: var(--color-text-onaccent);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.portfolio-value {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portfolio-value h2 {
+  font: var(--text-heading2);
+  margin: 0;
+}
+
+.portfolio-value p {
+  margin: 0;
+  font: var(--text-body2);
+  color: var(--color-text-secondary);
+}
+
+.portfolio-value h3 {
+  margin: 0.5rem 0 0;
+  font: var(--text-heading3);
+  color: var(--color-accent);
+}
+
+.token-socials {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-stroke);
+}
+
+.token-socials h3 {
+  font: var(--text-heading3);
+  margin: 0 0 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font: var(--text-button2);
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.price-display {
+  margin: 1rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.price-display h3 {
+  font: var(--text-heading3);
+  margin: 0;
+}
+
+.token-info-container {
+  overflow-y: auto;
+  padding-right: 16px;
+  height: 100%;
+}
