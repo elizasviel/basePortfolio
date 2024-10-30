@@ -42,7 +42,7 @@ bun i
 3. Start the development server:
 
 ```bash
-bun dev
+bun run dev
 ```
 
 The application will be available at `http://localhost:5173`
