@@ -2,14 +2,6 @@
 
 A decentralized token swapping application built for Base network, powered by 0x Protocol. Enables seamless swaps between ETH and USDC with real-time price quotes and transaction history.
 
-## Features
-
-- 🔄 Swap between ETH and USDC on Base network
-- 💰 Real-time price quotes from 0x Protocol
-- 📊 Portfolio value tracking
-- 📜 Transaction history with IndexedDB persistence
-- 🎨 Clean, modern UI with custom design system
-
 ## Tech Stack
 
 - React 18
